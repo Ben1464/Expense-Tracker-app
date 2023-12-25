@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExpenseList = ({ expenses, onDeleteExpense, onStartEditExpense }) => {
+const ExpenseList = ({ expenses, onDeleteExpense }) => {
   const totalExpenses = expenses.reduce(
     (total, expense) => total + parseFloat(expense.amount),
     0
@@ -13,7 +13,6 @@ const ExpenseList = ({ expenses, onDeleteExpense, onStartEditExpense }) => {
         {expenses.map((expense, index) => (
           <li key={index}>
             {expense.description} - ${expense.amount} ({expense.category}) - {expense.date}
-            <button onClick={() => onStartEditExpense(index)}>Edit</button>
             <button onClick={() => onDeleteExpense(index)}>Delete</button>
           </li>
         ))}
