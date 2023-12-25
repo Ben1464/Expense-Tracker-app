@@ -1,38 +1,113 @@
-.App {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2e2e2e, #353535);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(53, 53, 53, 0.95);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #64ffda;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  margin-bottom: 10px;
+  color: #64ffda;
 }
 
-@keyframes App-logo-spin {
+input,
+select {
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(78, 78, 78, 0.9);
+  color: #fff;
+  width: 100%;
+}
+
+button {
+  background-color: #64ffda;
+  color: #121212;
+  border: none;
+  padding: 12px; /* Reduced padding for a more moderate size */
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px; /* Adjusted font size */
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #52e5c7;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 18px;
+  background: rgba(78, 78, 78, 0.9);
+  padding: 18px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  color: #aaa;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #464646;
+}
+
+/* Optional: Add animation for a more modern feel */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
+
+.container,
+ul,
+form,
+footer {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
