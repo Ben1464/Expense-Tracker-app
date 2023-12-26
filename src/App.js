@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react';
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
@@ -33,11 +34,7 @@ const App = () => {
     <div>
       <h1>Expense Tracker App</h1>
       <ExpenseForm onAddExpense={addExpense} editIndex={editIndex} />
-      <ExpenseList
-        expenses={expenses}
-        onDeleteExpense={deleteExpense}
-        onStartEditExpense={startEditExpense}
-      />
+      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense} onStartEditExpense={startEditExpense} />
       <Footer />
     </div>
   );
