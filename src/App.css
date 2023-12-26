@@ -5,9 +5,7 @@ body {
   background: linear-gradient(to right, #2e2e2e, #353535);
   color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column; /* Change to column layout */
 }
 
 .container {
@@ -16,7 +14,7 @@ body {
   padding: 30px;
   width: 400px;
   border-radius: 10px;
-  margin-top: 30px;
+  margin: 30px auto; /* Center the container */
   text-align: center;
 }
 
@@ -46,7 +44,7 @@ select {
   font-size: 14px;
   background: rgba(78, 78, 78, 0.9);
   color: #fff;
-  width: 100%;
+  width: calc(100% - 24px); /* Adjust width and padding */
 }
 
 button {
@@ -58,7 +56,7 @@ button {
   border-radius: 8px;
   font-size: 14px;
   transition: background-color 0.3s ease;
-  width: 100%;
+  width: calc(100% - 24px); /* Adjust width and padding */
 }
 
 button:hover {
@@ -76,7 +74,7 @@ li {
   padding: 18px;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* Change to column layout on small screens */
+  flex-direction: column;
   transition: transform 0.3s ease;
 }
 
