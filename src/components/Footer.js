@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => (
   <footer style={{ marginTop: '20px', textAlign: 'center', color: '#aaa' }}>
-    <p>&copy; 2023 Expense Tracker App </p>
-    <p>RavenDev</p>
+    <p>&copy; 2023 <b>RavenDev</b>  </p>
+    
   </footer>
 );
 
