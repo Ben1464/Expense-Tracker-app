@@ -1,10 +1,16 @@
 import React from 'react';
 
-const Footer = () => (
-  <footer style={{ marginTop: '20px', textAlign: 'center', color: '#aaa' }}>
-    <p>&copy; 2023 <b>RavenDev</b>  </p>
-    
-  </footer>
-);
+const Footer = () => {
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
+
+  return (
+    <footer>
+      <p>&copy; {getCurrentYear()} <b>RavenDev</b> </p>
+      <p>All Rights Reserved</p>
+    </footer>
+  );
+};
 
 export default Footer;
