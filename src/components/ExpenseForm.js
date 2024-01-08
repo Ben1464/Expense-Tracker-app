@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ExpenseForm = ({ onAddExpense }) => {
+const ExpenseForm = ({ onAddExpense, editIndex }) => {
   const [budget, setBudget] = useState('');
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
@@ -16,7 +16,11 @@ const ExpenseForm = ({ onAddExpense }) => {
       return;
     }
 
-    onAddExpense({ budget, description, amount, category, date });
+    const newExpense = { budget, description, amount, category, date };
+
+    // If there's an editIndex, pass it to onAddExpense
+    onAddExpense(newExpense, editIndex);
+
     // Clear form after submission
     setBudget('');
     setDescription('');
@@ -62,7 +66,6 @@ const ExpenseForm = ({ onAddExpense }) => {
           <option value="Clothing">Clothing</option>
           <option value="Black Tax">Black Tax</option>
           <option value="Entertainment">Entertainment</option>
-
         </select>
       </label>
       <label>
