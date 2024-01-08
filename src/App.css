@@ -2,24 +2,25 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #2e2e2e, #353535);
-  color: #fff;
+  background: #f4f4f4; /* Light background color */
+  color: #333; /* Dark text color */
   display: flex;
-  flex-direction: column; /* Change to column layout */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  background: rgba(53, 53, 53, 0.95);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  background: #fff; /* White background color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   width: 400px;
   border-radius: 10px;
-  margin: 30px auto; /* Center the container */
   text-align: center;
 }
 
 h1 {
-  color: #64ffda;
+  color: #3498db; /* Modern blue color */
   margin-bottom: 20px;
 }
 
@@ -31,36 +32,43 @@ form {
 
 label {
   margin-bottom: 10px;
-  color: #64ffda;
+  color: #555; /* Dark gray color */
 }
 
 input,
 select {
-  padding: 12px;
-  margin-top: 8px;
-  margin-bottom: 18px;
-  border: 1px solid #464646;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd; /* Light gray border */
   border-radius: 8px;
-  font-size: 14px;
-  background: rgba(78, 78, 78, 0.9);
-  color: #fff;
-  width: calc(100% - 24px); /* Adjust width and padding */
+  font-size: 16px;
+  background: #f9f9f9; /* Light background color */
+  color: #333;
+  width: calc(100% - 24px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #3498db; /* Modern blue color on focus */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
 }
 
 button {
-  background-color: #64ffda;
-  color: #121212;
+  background-color: #3498db;
+  color: #fff; /* White text color */
   border: none;
-  padding: 12px;
+  padding: 14px;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.3s ease;
-  width: calc(100% - 24px); /* Adjust width and padding */
+  width: calc(100% - 24px);
 }
 
 button:hover {
-  background-color: #52e5c7;
+  background-color: #2980b9; /* Slightly darker blue on hover */
 }
 
 ul {
@@ -69,53 +77,22 @@ ul {
 }
 
 li {
-  margin-bottom: 18px;
-  background: rgba(78, 78, 78, 0.9);
-  padding: 18px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 li:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* Footer Styling */
 footer {
   text-align: center;
-  color: #aaa;
+  color: #777; /* Light gray color */
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #464646;
-}
-
-/* Optional: Add animation for a more modern feel */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.container,
-ul,
-form,
-footer {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Media Query for smaller screens */
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  li {
-    flex-direction: row; /* Change back to row layout on small screens */
-  }
+  border-top: 1px solid #ddd; /* Light gray border */
 }
